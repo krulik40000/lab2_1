@@ -50,4 +50,11 @@ public class Test {
         assertThat(result.isFound(), is(true));
         assertThat(result.getPosition(), is(seq.length));
     }
+    
+    @org.junit.Test
+    public void MidElementInSeq() {
+        SearchResult result = search(seq[seq.length/2], seq);
+        assertThat(result.isFound(), is(true));
+        assertThat(result.getPosition(), is(seq.length/2+1));
+    }
 }
