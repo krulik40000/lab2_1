@@ -43,4 +43,11 @@ public class Test {
         assertThat(result.isFound(), is(true));
         assertThat(result.getPosition(), is(1));
     }
+    
+    @org.junit.Test
+    public void LastElementInSeq() {
+        SearchResult result = search(seq[seq.length-1], seq);
+        assertThat(result.isFound(), is(true));
+        assertThat(result.getPosition(), is(seq.length));
+    }
 }
