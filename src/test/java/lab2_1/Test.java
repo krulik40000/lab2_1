@@ -57,4 +57,11 @@ public class Test {
         assertThat(result.isFound(), is(true));
         assertThat(result.getPosition(), is(seq.length/2+1));
     }
+    
+    @org.junit.Test
+    public void NoElementInSeq() {
+        SearchResult result = search(seq.length*2, seq);
+        assertThat(result.isFound(), is(false));
+        assertThat(result.getPosition(), is(-1));
+    }
 }
